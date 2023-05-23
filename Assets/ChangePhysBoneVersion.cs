@@ -22,6 +22,7 @@ namespace VRSuya.ChangePhysBoneVersion {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
 			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
 				PhysBone.version = VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_0;
+				EditorUtility.SetDirty(PhysBone);
 			}
 			Debug.Log("[VRSuya] Changed All PhysBone Version to 1.0");
 		}
@@ -31,6 +32,7 @@ namespace VRSuya.ChangePhysBoneVersion {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
 			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
 				PhysBone.version = VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_1;
+				EditorUtility.SetDirty(PhysBone);
 			}
 			Debug.Log("[VRSuya] Changed All PhysBone Version to 1.1");
 		}
