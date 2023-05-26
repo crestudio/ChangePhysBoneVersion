@@ -48,7 +48,7 @@ namespace VRSuya.ChangePhysBoneVersion {
 			}
 		}
 
-		/// <summary>Scene에 존재하는 모든 PhysBone의 버전을 Unity Console에 출력합니다</summary>
+		/// <summary>Scene에 존재하는 모든 PhysBone의 리스트를 가져옵니다</summary>
 		/// <returns>Scene에 존재하는 모든 PhysBone 컴포넌트 리스트</returns>
 		static List<VRCPhysBone> GetPhysBoneComponents() {
 			return SceneManager.GetActiveScene().GetRootGameObjects().SelectMany(gameObject => gameObject.GetComponentsInChildren<VRCPhysBone>(true)).ToList();
