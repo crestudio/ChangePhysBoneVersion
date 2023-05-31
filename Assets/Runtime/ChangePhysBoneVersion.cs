@@ -13,7 +13,7 @@ using VRC.SDK3.Dynamics.PhysBone.Components;
  * Contact : vrsuya@gmail.com // Twitter : https://twitter.com/VRSuya
  */
 
-namespace VRSuya.ChangePhysBoneVersion {
+namespace com.vrsuya.changephysboneversion {
 
     public class ChangePhysBoneVersion : EditorWindow {
 
