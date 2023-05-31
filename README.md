@@ -4,14 +4,16 @@
 
 ## 다운로드
 
-![VCC 패키지 추가](vcc://vpm/addRepo?url=https://macchiato.kr/vpm/vpm.json)
-![ZIP 다운로드](https://github.com/crestudio/AvatarSettingUpdater/releases)
+[VCC 패키지 추가](vcc://vpm/addRepo?url=https://macchiato.kr/vpm/vpm.json)
+
+[ZIP 다운로드](https://github.com/crestudio/AvatarSettingUpdater/releases)
 
 ___
 
 ## 개요 및 작동방식
 
 VRChat PhysBone 컴포넌트의 PhysBone 버전 일괄 변경 스크립트
+
 현재 활성화 된 씬(Scene)에서 숨겨진 오브젝트를 포함하여 **모든 피직스본 컴포넌트에 적용**
 
 ___
