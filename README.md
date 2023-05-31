@@ -4,7 +4,7 @@
 
 ## 다운로드
 
-[VCC 패키지 추가](vcc://vpm/addRepo?url=https://macchiato.kr/vpm/vpm.json)
+VCC 패키지 추가 > vcc://vpm/addRepo?url=https://macchiato.kr/vpm/vpm.json
 
 [ZIP 다운로드](https://github.com/crestudio/AvatarSettingUpdater/releases)
 
@@ -27,6 +27,12 @@ ___
 ___
 
 ## 업데이트 로그
+
+### 2023년 5월 31일 : 1.02
+
++ 주석 오타 수정
++ 아이콘 추가
++ Unity Package 화
 
 ### 2023년 5월 23일 : 1.01
 
