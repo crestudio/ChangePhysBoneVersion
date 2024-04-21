@@ -140,6 +140,84 @@ namespace com.vrsuya.changephysboneversion {
 			Debug.Log("[VRSuya] Changed All PhysBone Immobile to World");
 		}
 
+		[MenuItem("Tools/VRSuya/PhysBone/Animated/True")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Is Animated 속성을 참으로 변경합니다</summary>
+		static void ChangePhysBoneAnimatedToTrue() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.isAnimated != true) {
+					PhysBone.isAnimated = true;
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Changed All PhysBone Animated to True");
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Animated/False")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Is Animated 속성을 거짓으로 변경합니다</summary>
+		static void ChangePhysBoneAnimatedToFalse() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.isAnimated != false) {
+					PhysBone.isAnimated = false;
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Changed All PhysBone Animated to False");
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Animated/Debug Animated")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Is Animated 속성을 Unity Console에 출력합니다</summary>
+		static void DebugLogPhysBoneAnimateds() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.isAnimated == true) {
+					Debug.LogWarning("[VRSuya] PhysBone Parent GameObject Name : " + PhysBone.name + " / Is Animated : True");
+				} else {
+					Debug.Log("[VRSuya] PhysBone Parent GameObject Name : " + PhysBone.name + " / Is Animated : False");
+				}
+			}
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Reset/True")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Reset When Disabled 속성을 참으로 변경합니다</summary>
+		static void ChangePhysBoneResetToTrue() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.resetWhenDisabled != true) {
+					PhysBone.resetWhenDisabled = true;
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Changed All PhysBone Reset to True");
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Reset/False")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Reset When Disabled 속성을 거짓으로 변경합니다</summary>
+		static void ChangePhysBoneResetToFalse() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.resetWhenDisabled != false) {
+					PhysBone.resetWhenDisabled = false;
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Changed All PhysBone Reset to False");
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Reset/Debug Reset")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Reset When Disabled 속성을 Unity Console에 출력합니다</summary>
+		static void DebugLogPhysBoneResets() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.resetWhenDisabled == true) {
+					Debug.LogWarning("[VRSuya] PhysBone Parent GameObject Name : " + PhysBone.name + " / Reset When Disabled : True");
+				} else {
+					Debug.Log("[VRSuya] PhysBone Parent GameObject Name : " + PhysBone.name + " / Reset When Disabled : False");
+				}
+			}
+		}
+
 		/// <summary>Scene에 존재하는 모든 PhysBone의 리스트를 가져옵니다</summary>
 		/// <returns>Scene에 존재하는 모든 PhysBone 컴포넌트 리스트</returns>
 		static List<VRCPhysBone> GetPhysBoneComponents() {
