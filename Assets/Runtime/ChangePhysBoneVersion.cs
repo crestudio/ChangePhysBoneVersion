@@ -17,7 +17,7 @@ namespace com.vrsuya.changephysboneversion {
 
     public class ChangePhysBoneVersion : EditorWindow {
 
-		[MenuItem("Tools/VRSuya/PhysBone/Change All PhysBone Version to 1.0")]
+		[MenuItem("Tools/VRSuya/PhysBone/Version/Change All Version to 1.0")]
 		/// <summary>Scene에 존재하는 모든 PhysBone을 1.0으로 변경합니다</summary>
 		static void ChangePhysBoneVersionTo1_0() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
@@ -28,7 +28,7 @@ namespace com.vrsuya.changephysboneversion {
 			Debug.Log("[VRSuya] Changed All PhysBone Version to 1.0");
 		}
 
-		[MenuItem("Tools/VRSuya/PhysBone/Change All PhysBone Version to 1.1")]
+		[MenuItem("Tools/VRSuya/PhysBone/Version/Change All Version to 1.1")]
 		/// <summary>Scene에 존재하는 모든 PhysBone을 1.1으로 변경합니다</summary>
 		static void ChangePhysBoneVersionTo1_1() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
@@ -39,7 +39,7 @@ namespace com.vrsuya.changephysboneversion {
 			Debug.Log("[VRSuya] Changed All PhysBone Version to 1.1");
 		}
 
-		[MenuItem("Tools/VRSuya/PhysBone/Debug All PhysBone Version")]
+		[MenuItem("Tools/VRSuya/PhysBone/Version/Debug All PhysBone Version")]
 		/// <summary>Scene에 존재하는 모든 PhysBone의 버전을 Unity Console에 출력합니다</summary>
 		static void DebugLogPhysBoneComponets() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
