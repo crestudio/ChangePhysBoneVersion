@@ -84,6 +84,28 @@ namespace com.vrsuya.changephysboneversion {
 			}
 		}
 
+		[MenuItem("Tools/VRSuya/PhysBone/Gizmo/Hide")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 기즈모를 숨깁니다</summary>
+		static void HidePhysBoneGizmo() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				PhysBone.showGizmos = false;
+				EditorUtility.SetDirty(PhysBone);
+				Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Hidden");
+			}
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Gizmo/Show")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 기즈모를 보이게 합니다</summary>
+		static void ShowPhysBoneGizmo() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				PhysBone.showGizmos = true;
+				EditorUtility.SetDirty(PhysBone);
+				Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Show");
+			}
+		}
+
 		/// <summary>Scene에 존재하는 모든 PhysBone의 리스트를 가져옵니다</summary>
 		/// <returns>Scene에 존재하는 모든 PhysBone 컴포넌트 리스트</returns>
 		static List<VRCPhysBone> GetPhysBoneComponents() {
