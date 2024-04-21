@@ -48,6 +48,42 @@ namespace com.vrsuya.changephysboneversion {
 			}
 		}
 
+		[MenuItem("Tools/VRSuya/PhysBone/FoldOut/Change All FoldOut to Closed")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 속성들을 모두 닫습니다</summary>
+		static void ClosePhysBoneFoldOut() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				PhysBone.foldout_collision = false;
+				PhysBone.foldout_forces = false;
+				PhysBone.foldout_gizmos = false;
+				PhysBone.foldout_grabpose = false;
+				PhysBone.foldout_limits = false;
+				PhysBone.foldout_options = false;
+				PhysBone.foldout_stretchsquish = false;
+				PhysBone.foldout_transforms = false;
+				EditorUtility.SetDirty(PhysBone);
+				Debug.Log("[VRSuya] Changed All PhysBone FoldOut to Closed");
+			}
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/FoldOut/Change All FoldOut to Opened")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 속성들을 모두 닫습니다</summary>
+		static void OpenPhysBoneFoldOut() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				PhysBone.foldout_collision = true;
+				PhysBone.foldout_forces = true;
+				PhysBone.foldout_gizmos = true;
+				PhysBone.foldout_grabpose = true;
+				PhysBone.foldout_limits = true;
+				PhysBone.foldout_options = true;
+				PhysBone.foldout_stretchsquish = true;
+				PhysBone.foldout_transforms = true;
+				EditorUtility.SetDirty(PhysBone);
+				Debug.Log("[VRSuya] Changed All PhysBone FoldOut to Opened");
+			}
+		}
+
 		/// <summary>Scene에 존재하는 모든 PhysBone의 리스트를 가져옵니다</summary>
 		/// <returns>Scene에 존재하는 모든 PhysBone 컴포넌트 리스트</returns>
 		static List<VRCPhysBone> GetPhysBoneComponents() {
