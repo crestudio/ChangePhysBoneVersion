@@ -114,6 +114,32 @@ namespace com.vrsuya.changephysboneversion {
 			}
 		}
 
+		[MenuItem("Tools/VRSuya/PhysBone/Immobile/All Motion")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Immobile 타입을 All Motion으로 변경합니다</summary>
+		static void ChangePhysBoneImmobileToAllMotion() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.immobileType != VRC.Dynamics.VRCPhysBoneBase.ImmobileType.AllMotion) {
+					PhysBone.immobileType = VRC.Dynamics.VRCPhysBoneBase.ImmobileType.AllMotion;
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Changed All PhysBone Immobile to All Motion");
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Immobile/World")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Immobile 타입을 World으로 변경합니다</summary>
+		static void ChangePhysBoneImmobileToWorld() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.immobileType != VRC.Dynamics.VRCPhysBoneBase.ImmobileType.World) {
+					PhysBone.immobileType = VRC.Dynamics.VRCPhysBoneBase.ImmobileType.World;
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Changed All PhysBone Immobile to World");
+		}
+
 		/// <summary>Scene에 존재하는 모든 PhysBone의 리스트를 가져옵니다</summary>
 		/// <returns>Scene에 존재하는 모든 PhysBone 컴포넌트 리스트</returns>
 		static List<VRCPhysBone> GetPhysBoneComponents() {
