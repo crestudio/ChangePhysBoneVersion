@@ -22,8 +22,10 @@ namespace com.vrsuya.changephysboneversion {
 		static void ChangePhysBoneVersionTo1_0() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
 			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
-				PhysBone.version = VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_0;
-				EditorUtility.SetDirty(PhysBone);
+				if (PhysBone.version != VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_0) {
+					PhysBone.version = VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_0;
+					EditorUtility.SetDirty(PhysBone);
+				}
 			}
 			Debug.Log("[VRSuya] Changed All PhysBone Version to 1.0");
 		}
@@ -33,8 +35,10 @@ namespace com.vrsuya.changephysboneversion {
 		static void ChangePhysBoneVersionTo1_1() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
 			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
-				PhysBone.version = VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_1;
-				EditorUtility.SetDirty(PhysBone);
+				if (PhysBone.version != VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_1) {
+					PhysBone.version = VRC.Dynamics.VRCPhysBoneBase.Version.Version_1_1;
+					EditorUtility.SetDirty(PhysBone);
+				}
 			}
 			Debug.Log("[VRSuya] Changed All PhysBone Version to 1.1");
 		}
@@ -89,8 +93,10 @@ namespace com.vrsuya.changephysboneversion {
 		static void HidePhysBoneGizmo() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
 			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
-				PhysBone.showGizmos = false;
-				EditorUtility.SetDirty(PhysBone);
+				if (PhysBone.showGizmos != false) {
+					PhysBone.showGizmos = false;
+					EditorUtility.SetDirty(PhysBone);
+				}
 				Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Hidden");
 			}
 		}
@@ -100,8 +106,10 @@ namespace com.vrsuya.changephysboneversion {
 		static void ShowPhysBoneGizmo() {
 			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
 			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
-				PhysBone.showGizmos = true;
-				EditorUtility.SetDirty(PhysBone);
+				if (PhysBone.showGizmos != true) {
+					PhysBone.showGizmos = true;
+					EditorUtility.SetDirty(PhysBone);
+				}
 				Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Show");
 			}
 		}
