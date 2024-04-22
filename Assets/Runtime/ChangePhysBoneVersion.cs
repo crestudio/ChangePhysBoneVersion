@@ -66,8 +66,8 @@ namespace com.vrsuya.changephysboneversion {
 				PhysBone.foldout_stretchsquish = false;
 				PhysBone.foldout_transforms = false;
 				EditorUtility.SetDirty(PhysBone);
-				Debug.Log("[VRSuya] Changed All PhysBone FoldOut to Closed");
 			}
+			Debug.Log("[VRSuya] Changed All PhysBone FoldOut to Closed");
 		}
 
 		[MenuItem("Tools/VRSuya/PhysBone/FoldOut/Opened")]
@@ -84,8 +84,8 @@ namespace com.vrsuya.changephysboneversion {
 				PhysBone.foldout_stretchsquish = true;
 				PhysBone.foldout_transforms = true;
 				EditorUtility.SetDirty(PhysBone);
-				Debug.Log("[VRSuya] Changed All PhysBone FoldOut to Opened");
 			}
+			Debug.Log("[VRSuya] Changed All PhysBone FoldOut to Opened");
 		}
 
 		[MenuItem("Tools/VRSuya/PhysBone/Gizmo/Hide")]
@@ -97,8 +97,8 @@ namespace com.vrsuya.changephysboneversion {
 					PhysBone.showGizmos = false;
 					EditorUtility.SetDirty(PhysBone);
 				}
-				Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Hidden");
 			}
+			Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Hidden");
 		}
 
 		[MenuItem("Tools/VRSuya/PhysBone/Gizmo/Show")]
@@ -110,8 +110,8 @@ namespace com.vrsuya.changephysboneversion {
 					PhysBone.showGizmos = true;
 					EditorUtility.SetDirty(PhysBone);
 				}
-				Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Show");
 			}
+			Debug.Log("[VRSuya] Changed All PhysBone Gizmo to Show");
 		}
 
 		[MenuItem("Tools/VRSuya/PhysBone/Immobile/All Motion")]
