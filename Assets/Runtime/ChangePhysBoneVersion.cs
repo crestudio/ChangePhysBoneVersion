@@ -218,6 +218,32 @@ namespace com.vrsuya.changephysboneversion {
 			}
 		}
 
+		[MenuItem("Tools/VRSuya/PhysBone/Quest/Remove Colliders")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Colliders 어레이를 제거합니다</summary>
+		static void EmptyPhysBoneColliders() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (PhysBone.colliders.Count > 0) {
+					PhysBone.colliders = new List<VRC.Dynamics.VRCPhysBoneColliderBase> { };
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Empty All PhysBone Colliders List");
+		}
+
+		[MenuItem("Tools/VRSuya/PhysBone/Quest/Remove Parameter")]
+		/// <summary>Scene에 존재하는 모든 PhysBone의 Parameter를 비웁니다</summary>
+		static void EmptyPhysBoneParameter() {
+			List<VRCPhysBone> PhysBoneComponents = GetPhysBoneComponents();
+			foreach (VRCPhysBone PhysBone in PhysBoneComponents) {
+				if (!string.IsNullOrEmpty(PhysBone.parameter)) {
+					PhysBone.parameter = "";
+					EditorUtility.SetDirty(PhysBone);
+				}
+			}
+			Debug.Log("[VRSuya] Empty All PhysBone Parameter");
+		}
+
 		/// <summary>Scene에 존재하는 모든 PhysBone의 리스트를 가져옵니다</summary>
 		/// <returns>Scene에 존재하는 모든 PhysBone 컴포넌트 리스트</returns>
 		static List<VRCPhysBone> GetPhysBoneComponents() {
