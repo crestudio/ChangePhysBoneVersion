@@ -15,7 +15,8 @@ using VRC.SDK3.Dynamics.PhysBone.Components;
 
 namespace com.vrsuya.changephysboneversion {
 
-    public class ChangePhysBoneVersion : EditorWindow {
+	[ExecuteInEditMode]
+	public class ChangePhysBoneVersion : EditorWindow {
 
 		[MenuItem("Tools/VRSuya/PhysBone/Version/1.0")]
 		/// <summary>Scene에 존재하는 모든 PhysBone을 1.0으로 변경합니다</summary>
