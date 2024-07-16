@@ -1,6 +1,6 @@
 {
   "name": "com.vrsuya.changephysboneversion",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "VRSuya - Change PhysBone Version",
   "description": "Change all VRChat PhysBone components version",
   "unity": "2019.4",
